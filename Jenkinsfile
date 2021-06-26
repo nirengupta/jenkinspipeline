@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('Code building') {
+      steps {
+        git(credentialsId: 'Peoplechoise@1', url: 'nirengupta/jenkinspipeline', branch: 'main', poll: true)
+      }
+    }
+
   }
 }
